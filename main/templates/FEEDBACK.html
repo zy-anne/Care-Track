@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback</title>
+
+ 
+  <!-- css links -->
+  <link rel="stylesheet" href="./src/css/index.css">
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,700;1,300&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+
+  <!-- emailjs -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+
+<body class="bg-[#fbfcf9]">
+    <nav>
+        <div class="wrapper">
+            <div class="logo">
+                <a href="#">CareTrack</a>
+            </div>
+            <input type="radio" name="slide" id="menu_btn" /><input type="radio" name="slide" id="cancel_btn" />
+            <ul class="nav_links">
+
+                <li><a href="HOME PAGE.html">Home</a></li>
+                <li><a href="ABOUT.html">About</a></li>
+                <li>
+                    <a href="#" class="desktop_item"> Menu</a>
+                    <input type="checkbox" id="showDrop" />
+                    <label for="showDrop" class="mobile_item"> Menu</label>
+                    <ul class="drop_menu">
+                        <li><a href="HEALTH INFORMATION.html">Health Information and Data</a></li>
+                        <li><a href="MEDICAL HISTORY.html">Medical History</a></li>
+                        <li><a href="NURSE'S NOTES.html">Nurse's Notes</a></li>
+                        <li><a href="HEALTH ASSESMENT.html">Health Assesment</a></li>
+                        <li><a href="RESULTS.html">Results</a></li>
+                        <li><a href="BILLING.HTML">Billing</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+
+        </div>
+    </nav>
+<style>
+    *{ margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;}
+
+        nav {
+            background-color: #0A6847;
+            position: top; /* Fix the navigation bar at the top of the viewport */
+            width: 100%;
+            z-index: 999;
+            height: 65px;
+            line-height: 65px;
+            top: 0;
+        }
+
+
+        nav .wrapper {
+            position: relative; /* Set relative positioning */
+            max-width: 1250px;
+            padding: 0 100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .wrapper .nav_links {
+            display: flex;
+        }
+
+        .wrapper .logo a,
+        .nav_links li a {
+            color: #f2f2f2;
+            padding: 10px 15px; /* Adjust padding */
+            text-decoration: none;
+        }
+
+        .wrapper .logo a {
+            font-size: 27px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .nav_links li a {
+            font-size: 18px;
+            font-weight: 500;
+            border-radius: 5px;
+            padding: 9px 15px;
+            transition: all 0.3s ease;
+        }
+
+        .nav_links li {
+            list-style-type: none;
+        }
+
+        .nav_links li a:hover {
+            background: #3bf068bd;
+        }
+
+        .nav_links .mobile_item {
+            display: none;
+        }
+
+        /* Drop Down Menu */
+        .nav_links .drop_menu {
+  position: absolute;
+  top: 65px;
+  width: 180px;
+  line-height: 45px;
+  background-color: #242526;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.nav_links li:hover .drop_menu,
+.nav_links li:hover .mega_box {
+  top: 65px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.drop_menu li a {
+  width: 100%;
+  display: block;
+  padding: 0 0 0 15px;
+  font-weight: 400;
+  border-radius: 0px;
+}
+
+        /* Mega Menu */
+        .wrapper input {
+            display: none;
+        }
+
+        @media screen and (max-width: 970px) {
+            .wrapper .btn {
+                display: block;
+            }
+
+            .wrapper .nav_links {
+                position: fixed;
+                height: 100vh;
+                width: 100%;
+                max-width: 350px;
+                background: #17834d;
+                display: block;
+                top: 0;
+                left: 0;
+                left: -100%;
+                overflow-y: auto;
+                line-height: 50px;
+                padding: 50px 10px;
+                box-shadow: 0 15px 15px rgba(255, 248, 248, 0.15);
+                transition: all 0.5s ease-in-out;
+            }
+
+            #menu_btn:checked ~ .nav_links {
+                left: 0%;
+            }
+
+            #menu_btn:checked ~ .btn.menu_btn {
+                display: none;
+            }
+
+            .nav_links::-webkit-scrollbar {
+                width: 0px;
+            }
+
+            .nav_links li {
+                margin: 15px 10px;
+            }
+
+            .nav_links li a {
+                padding: 0 20px;
+                display: block;
+                font-size: 20px;
+            }
+
+            /* drop down responsive */
+            .nav_links .drop_menu {
+                position: static;
+                left: 50%;
+                opacity: 1;
+                visibility: visible;
+                flex-wrap: top;
+                top: 65px;
+                padding-left: 80px;
+                width: 100%;
+                max-height: 0px;
+                overflow: scroll;
+            }
+
+            #showDrop:checked ~ .drop_menu {
+                max-height: 100%;
+            }
+
+            .nav_links .drop_menu li {
+                margin: 0;
+            }
+
+            .nav_links .drop_menu li a {
+                font-size: 18px;
+                border-radius: 5px;
+            }
+
+            .nav_links .desktop_item {
+                display: none;
+            }
+
+            .nav_links .mobile_item {
+                display: block;
+                font-size: 20px;
+                color: #f2f2f2;
+                font-weight: 500;
+                padding-left: 20px;
+                cursor: pointer;
+                border-radius: 5px;
+                transition: all 0.3s ease;
+            }
+
+            .nav_links .mobile_item:hover {
+                background: #1ccf63;
+            }
+        }
+    </style>
+
+  <main>
+    <div class="absolute top-2 right-4">
+      <div class="relative  top-2 w-24 h-24">
+        
+      </div>
+    </div>
+    <div class="flex text-center items-center justify-center flex-col gap-4 h-screen select-none">
+
+    
+      <div class="text-2xl font-bold px-4">Hey there! How would you describe me? I'd love to hear your thoughts and feedback!
+      </div>
+      <a href="#form-container"
+       
+          <path fill="currentColor" d="m12 18l-6-6l1.4-1.4l3.6 3.6V5h2v9.2l3.6-3.6L18 12z" />
+        </svg></a>
+    </div>
+
+    <section id="form-container" class="py-20 flex  items-center justify-center bg-cover bg-no-repeat form-bg" >
+      <form action="#" class="z-50" id="feedback-form" method="post">
+
+        <div class="px-8 md:px-12  xl:px-32  mx-auto">
+          <h2 class="text-4xl text-center lg:text-5xl font-bold leading-tight">Lets talk about everything!</h2>
+
+          <div
+            class="max-w-screen-xl mt-24 grid gap-8 grid-cols-1 md:grid-cols-2   text-gray-900 rounded-lg ">
+            <div class="flex flex-col justify-between">
+              <div>
+                <div class="relative">
+                  <span class="uppercase text-sm text-gray-600 font-bold">Full Name</span>
+                  <input
+                    class="w-full bg-gray-300 mb-4 text-gray-900 mt-2 p-3 border-[1px] rounded-lg focus:outline-none focus:shadow-outline"
+                    type="text" placeholder="" name="uname">
+                </div>
+                <div class="mt-8 relative">
+                  <span class="uppercase text-sm text-gray-600 font-bold">Email</span>
+                  <input
+                    class="w-full bg-gray-300 mb-4 text-gray-900 mt-2 p-3 border-[1px] rounded-lg focus:outline-none focus:shadow-outline"
+                    type="text" name="uemail">
+                </div>
+              </div>
+
+            </div>
+            <div class="">
+              <div class="relative">
+                <span class="uppercase text-sm text-gray-600 font-bold">Phone</span>
+                <input
+                  class="w-full bg-gray-300 text-gray-900 mt-2 p-3 mb-4 rounded-lg border-[1px] focus:outline-none focus:shadow-outline focus:appearance-none"
+                  type="number" placeholder="" name="uphone">
+              </div>
+              <div class="mt-8 custom-select relative">
+                <label for="designation" class="uppercase text-sm text-gray-600 font-bold">Designation</label>
+                <select id="designation" name="udesg" class=" w-full bg-gray-300 mb-4 text-gray-900 mt-2 p-3 border-[1px] rounded-lg appearance-none focus:outline-none focus:shadow-outline">
+          
+                    <option value="">SELECT</option>
+                    <option value="Student">Student</option>
+                    <option value="HR">HR</option>
+                    <option value="Profession">Profession</option>
+                    <option value="Others">Others</option>
+           
+                </select>
+            </div>
+            </div>
+          </div>
+          <div class="mt-8 relative">
+            <span class="uppercase text-sm text-gray-600 font-bold">Message</span>
+            <textarea
+             name="umessage" class="w-full h-32 bg-gray-300 border-[1px] text-gray-900 mt-2 mb-[8px] p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+          </div>
+          <div class="mt-8 ">
+            <button
+              class="uppercase text-sm font-bold tracking-wide bg-[#9cda8a] text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
+              Send Message
+            </button>
+          </div>
+        </div>
+
+      </form>
+    </section>
+  </main>
+
+  <!-- mail success or fail notification -->
+  <div id="enotify" class="z-50 bg-[#9cda8a] px-4 py-2 rounded font-medium top-2 left-1/2 -translate-x-1/2 fixed shadow-xl flex justify-center items-center gap-5" style="display: none;">
+    <span id="en-mesage"></span> <span class="text-red-700 cursor-pointer hover:text-red-500 " id="notify-close-icon">x</span>
+  </div>
+
+  <!-- footer -->
+    <footer class="text-[12px] md:text-sm text-center py-2">
+     
+  <!-- js links -->
+  <script type="module" src="./src/js/main.js"></script>
+
+
+  <style>
+    /* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  color: #f2f68a;
+  padding: 10px;
+}
+
+/* Main */
+main {
+  padding: 20px;
+}
+
+/* Welcome Section */
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 100vh;
+  background-color: #fbfcf9;
+}
+
+.welcome-gif {
+  width: 150px;
+  height: 150px;
+}
+
+.welcome-message {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.way-to-form-btn {
+  background-color: #236e0c;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.way-to-form-btn:hover {
+  background-color: #184b0b;
+}
+
+/* Form Section */
+#form-container {
+  padding: 20px;
+  text-align: center;
+}
+
+form {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+input[type='text'],
+input[type='number'],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+select {
+  appearance: none;
+}
+
+button {
+  background-color: #338d17;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #183a0f;
+}
+
+/* Notification */
+#enotify {
+  background-color: #9cda8a;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+
+#enotify span {
+  margin-right: 5px;
+}
+
+#notify-close-icon {
+  cursor: pointer;
+}
+
+body {
+    background-color: #f7eea1 !important;
+}
+
+  </style>
+</body>
+
+</html>
