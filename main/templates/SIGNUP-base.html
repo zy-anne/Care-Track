@@ -7,41 +7,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  {% extends 'signup-base.html' %}
-  {% load static %}
-  
-  {% block content %}
-  <div class="wrapper">
-     <div class="title-text">
-        <div class="title signup">
-           Account
+
+<div class="wrapper">
+   <div class="title-text">
+      <div class="title signup">
+         Account
+      </div>
+   </div>
+   
+      <div class="form-inner">
+         <form id="signupForm" action="#" class="signup">
+            <div class="field">
+               <input type="text" placeholder="Email Address" required>
+            </div>
+            <div class="field">
+               <input type="password" placeholder="Password" required>
+            </div>
+          
+            <div class="field btn" id="signupButton">
+               <div class="btn-layer"></div>
+               <input type="submit" value="SignUp">
+            </div>
+         </form>
+         <div class="signup-link">
+          <button onclick="window.location.href='/login/'">Log In</button>
         </div>
-     </div>
-     
-        <div class="form-inner">
-           <form id="signupForm" action="{% url 'signup' %}" method="POST" class="signup">
-              {% csrf_token %}
-              {{ form.as_p }}
-              <div class="field">
-                 {{ form.email }}
-              </div>
-              <div class="field">
-                 {{ form.password }}
-              </div>
-            
-              <div class="field btn" id="signupButton">
-                 <div class="btn-layer"></div>
-                 <input type="submit" value="SignUp">
-              </div>
-           </form>
-           <div class="signup-link">
-            <button onclick="window.location.href='/login/'">Log In</button>
-          </div>
-        </div>
-     </div>
-  </div>
-  
-  {% endblock %}
+      </div>
+   </div>
+</div>
 
 <script>
 document.getElementById("signupForm").addEventListener("submit", function(event) {

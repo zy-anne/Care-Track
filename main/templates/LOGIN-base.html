@@ -8,38 +8,40 @@
 </head>
 <body>
 
-  {% extends 'login-base.html' %}
-  {% load static %}
-  
-  {% block content %}
-  <div class="wrapper">
-     <div class="title-text">
-        <div class="title login">
-          Account Login
-        </div>
-     </div>
-  
-     <div class="form-inner">
-      <form id="signupForm" action="{% url 'login_view' %}" method="POST" class="login">
-         {% csrf_token %}
-        <div class="field">
-          <input type="email" name="email" placeholder="Email" required>
-        </div>
-        <div class="field">
-          <input type="password" name="password" placeholder="Password" required>
-        </div>
-         <div class="field btn" id="loginButton">
-            <div class="btn-layer"></div>
-            <input type="submit" value="Login">
-         </div>
-      </form>
-      <div class="signup-link">
-         <button onclick="window.location.href='/signup/'">Create A New</button>
+<div class="wrapper">
+   <div class="title-text">
+      <div class="title login">
+        Account Login
       </div>
    </div>
-  </div>
   
-  {% endblock %}
+      <div class="form-inner">
+         <form action="/main-menu/" class="login">
+            <div class="field">
+               <input type="text" placeholder="Email Address" required>
+            </div>
+            <div class="field">
+               <input type="password" placeholder="Password" required>
+            </div>
+            <div class="pass-link">
+               <a href="#">Reset password?</a>
+            </div>
+            <a>
+            </a>
+            <div class="field btn" id="loginButton">
+              <div class="btn-layer"></div>
+              <input type="submit" value="Login">
+              <li id="medicalHistoryLink"><a href="/main-menu/">Medical History</a></li>
+            </div>
+         </form>
+         <div class="signup-link">
+         
+          <button onclick="window.location.href='signup/'">Create A New</button>
+        </div>
+        
+      </div>
+   </div>
+</div>
 
 <script src="style.js"></script>
 

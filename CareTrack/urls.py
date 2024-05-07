@@ -26,6 +26,7 @@ from main.views import (
     index_screen_view,
     results_screen_view,
     login_screen_view,
+    signup_screen_view,
     main_menu_screen_view,
 )
 urlpatterns = [
@@ -36,6 +37,7 @@ urlpatterns = [
     path ('feedback/', feedback_screen_view, name="feedback"),
     path ('index/', index_screen_view, name="index"),
     path ('login/', login_screen_view, name="login"),
+    path ('signup/', signup_screen_view, name="signup"),
     path ('main-menu/', main_menu_screen_view, name="main-menu"),
     path ('results/', results_screen_view, name="results"),
     ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

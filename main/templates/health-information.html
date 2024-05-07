@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Sheet</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #F6E9B2;
+    color: #0A6847;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    color: #F3CA52;
+    text-align: center;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  input[type="text"],
+  input[type="date"],
+  select {
+    width: calc(100% - 20px);
+    padding: 8px;
+    border: 1px solid #7ABA78;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  input[type="radio"] {
+    margin-right: 5px;
+  }
+  button {
+    background-color: #F3CA52;
+    color: #0A6847;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+  }
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #7ABA78;
+  }
+  th {
+    background-color: #F3CA52;
+    color: #0A6847;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Registration Sheet</h1>
+  <form id="registrationForm">
+    <div class="form-group">
+      <label for="admissionDate">Admission Date:</label>
+      <input type="date" id="admissionDate" name="admissionDate">
+    </div>
+    <div class="form-group">
+      <label for="roomNo">Room No.:</label>
+      <input type="text" id="roomNo" name="roomNo">
+    </div>
+    <div class="form-group">
+      <label for="bedNo">Bed No.:</label>
+      <input type="text" id="bedNo" name="bedNo">
+    </div>
+    <hr>
+    <div class="form-group">
+      <label for="patientName">Patient's Name:</label>
+      <input type="text" id="patientName" name="patientName">
+    </div>
+    <div class="form-group">
+      <label for="birthday">Birthday:</label>
+      <input type="date" id="birthday" name="birthday">
+    </div>
+    <div class="form-group">
+      <label for="weight">Weight (kg):</label>
+      <input type="text" id="weight" name="weight">
+    </div>
+    <div class="form-group">
+      <label for="height">Height (cm):</label>
+      <input type="text" id="height" name="height">
+    </div>
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <input type="text" id="age" name="age">
+    </div>
+    <div class="form-group">
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="bmi">BMI:</label>
+      <input type="text" id="bmi" name="bmi">
+    </div>
+    <hr>
+    <div class="form-group">
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address">
+    </div>
+    <div class="form-group">
+      <label for="nationality">Nationality:</label>
+      <input type="text" id="nationality" name="nationality">
+    </div>
+    <hr>
+    <div class="form-group">
+      <label for="religion">Religion:</label>
+      <input type="text" id="religion" name="religion">
+    </div>
+    <div class="form-group">
+      <label for="maritalStatus">Marital Status:</label><br>
+      <input type="radio" id="single" name="maritalStatus" value="single">
+      <label for="single">Single</label>
+      <input type="radio" id="married" name="maritalStatus" value="married">
+      <label for="married">Married</label>
+    </div>
+    <hr>
+    <div class="form-group">
+      <label for="chiefComplaint">Chief Complaint:</label>
+      <textarea id="chiefComplaint" name="chiefComplaint" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="nursingDx">Nursing Dx:</label>
+      <textarea id="nursingDx" name="nursingDx" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="admittingDx">Admitting Dx:</label>
+      <textarea id="admittingDx" name="admittingDx" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="otherDx">Other Dx:</label>
+      <textarea id="otherDx" name="otherDx" rows="3"></textarea>
+    </div>
+    <hr>
+    <div class="form-group">
+      <label for="foodAllergies">Food Allergies:</label>
+      <textarea id="foodAllergies" name="foodAllergies" rows="2"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="drugAllergies">Drug Allergies:</label>
+      <textarea id="drugAllergies" name="drugAllergies" rows="2"></textarea>
+    </div>
+  </form>
+
+  <h2 style="text-align: center;">List of Medication</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name of Medication (Generic)</th>
+        <th>Dosage</th>
+        <th>Frequency</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="text" id="medicationName" name="medicationName"></td>
+        <td><input type="text" id="dosage" name="dosage"></td>
+        <td><input type="text" id="frequency" name="frequency"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 style="text-align: center;">Problem List</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Problem</th>
+        <th>Problem Note</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="text" id="problem" name="problem"></td>
+        <td><input type="text" id="problemNote" name="problemNote"></td>
+        <td>
+          <select id="status" name="status">
+            <option value="active">Active</option>
+            <option value="resolved">Resolved</option>
+          </select>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 style="text-align: center;">Visit Details</h2>
+  <div class="form-group">
+    <label for="patient">Patient:</label>
+    <input type="text" id="patient" name="patient">
+  </div>
+  <div class="form-group">
+    <label for="physician">Physician:</label>
+    <input type="text" id="physician" name="physician">
+  </div>
+  <div class="form-group">
+    <label for="careUnit">Care Unit:</label>
+    <input type="text" id="careUnit" name="careUnit">
+  </div>
+  <div class="form-group">
+    <label for="dateVisit">Date Visit:</label>
+    <input type="date" id="dateVisit" name="dateVisit">
+  </div>
+  <div class="form-group">
+    <label for="diagnosis">Diagnosis (Dx):</label>
+    <textarea id="diagnosis" name="diagnosis" rows="3"></textarea>
+  </div>
+<button id="saveButton">Save</button>
+</div>
+
+<script>
+  document.getElementById('saveButton').addEventListener('click', function() {
+    alert("Save Successfully");
+  });
+</script>
+
+</body>
+</html>
