@@ -33,11 +33,11 @@ def signup_screen_view(request):
     if request.method == 'POST':
         form = SignupForm(request.POST)
         if form.is_valid():
-            email = form.cleaned_data['email']
-            password = form.cleaned_data['password']
-            user = User.objects.create(email=email, password=password)
-            hashed_password = make_password(password)
-            user = User.objects.create(email=email, password=hashed_password)
+            form.save()
+            email = form.cleaned_data.get('email')
+            raw_password = form.cleaned_data.get('password')
+            user = authenticate(email=email, password=raw_password)
+            login(request, user)
             return redirect('/main-menu/')
     else:
         form = SignupForm()
@@ -63,3 +63,6 @@ def main_menu_screen_view(request):
 
 def results_screen_view(request):
     return render(request, 'results.html')
+
+def healthinfo_screen_view(request):
+    return render(request, 'health-information.html')

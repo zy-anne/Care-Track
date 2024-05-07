@@ -28,6 +28,7 @@ from main.views import (
     login_screen_view,
     signup_screen_view,
     main_menu_screen_view,
+    healthinfo_screen_view
 )
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -40,4 +41,5 @@ urlpatterns = [
     path ('signup/', signup_screen_view, name="signup"),
     path ('main-menu/', main_menu_screen_view, name="main-menu"),
     path ('results/', results_screen_view, name="results"),
+    path ('health-information/', healthinfo_screen_view, name="health-information"),
     ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
