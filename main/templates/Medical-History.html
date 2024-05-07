@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical History</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #7ABA78;
+            color: #272927bd;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #2b5f26;
+            text-align: center;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #4CAF50;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: #ff0b0b;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            font-size: 16px;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Medical History</h1>
+        <form id="registration-form" action="#" method="post">
+            <fieldset class="section">
+                <legend>Personal Information</legend>
+                <table>
+                    <tr>
+                        <td><label for="lastName">Last Name:</label></td>
+                        <td><input type="text" id="lastName" name="lastName" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="firstName">First Name:</label></td>
+                        <td><input type="text" id="firstName" name="firstName" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="middleInitial">Middle Initial:</label></td>
+                        <td><input type="text" id="middleInitial" name="middleInitial" maxlength="1"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="dob">Date of Birth:</label></td>
+                        <td><input type="date" id="dob" name="dob" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="sex">Sex:</label></td>
+                        <td>
+                            <select id="sex" name="sex" required>
+                                <option value="">Select</option>
+                                <option value="female">Female</option>
+                                <option value="male">Male</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="maritalStatus">Marital Status:</label></td>
+                        <td>
+                            <select id="maritalStatus" name="maritalStatus">
+                                <option value="">Select</option>
+                                <option value="single">Single</option>
+                                <option value="married">Married</option>
+                                <option value="divorced">Divorced</option>
+                                <option value="widowed">Widowed</option>
+                                <option value="separated">Separated</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <fieldset class="section">
+                <legend>Pharmacy Information</legend>
+                <table>
+                    <tr>
+                        <td><label for="preferredPharmacy">Preferred Pharmacy:</label></td>
+                        <td><input type="text" id="preferredPharmacy" name="preferredPharmacy"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="pharmacyPhone">Pharmacy Phone:</label></td>
+                        <td><input type="tel" id="pharmacyPhone" name="pharmacyPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="pharmacyAddress">Pharmacy Address:</label></td>
+                        <td><textarea id="pharmacyAddress" name="pharmacyAddress"></textarea></td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <fieldset class="section">
+                <legend>Primary Care Physician</legend>
+                <table>
+                    <tr>
+                        <td><label for="pcp">Primary Care Physician (PCP):</label></td>
+                        <td><input type="text" id="pcp" name="pcp"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="referringDoctor">Referring Doctor:</label></td>
+                        <td><input type="text" id="referringDoctor" name="referringDoctor"></td>
+                    </tr>
+                </table>
+            </fieldset>
+            
+            <fieldset class="section">
+                <legend>Medical History</legend>
+                <div class="conditions-table">
+                    <div class="conditions-column">
+                        <h3>Chronic Conditions</h3>
+                        <label><input type="checkbox" id="diabetes" name="medicalConditions" value="diabetes"> Diabetes</label><br>
+                        <label><input type="checkbox" id="hypertension" name="medicalConditions" value="hypertension"> Hypertension</label><br>
+                        <label><input type="checkbox" id="asthma" name="medicalConditions" value="asthma"> Asthma</label><br>
+                        <label><input type="checkbox" id="heartDisease" name="medicalConditions" value="heartDisease"> Heart Disease</label><br>
+                        <label><input type="checkbox" id="stroke" name="medicalConditions" value="stroke"> Stroke</label><br>
+                        <label><input type="checkbox" id="cancer" name="medicalConditions" value="cancer"> Cancer</label><br>
+                        <label><input type="checkbox" id="arthritis" name="medicalConditions" value="arthritis"> Arthritis</label><br>
+                        <label><input type="checkbox" id="osteoporosis" name="medicalConditions" value="osteoporosis"> Osteoporosis</label><br>
+                        <label><input type="checkbox" id="obesity" name="medicalConditions" value="obesity"> Obesity</label><br>
+                        <label><input type="checkbox" id="fibromyalgia" name="medicalConditions" value="fibromyalgia"> Fibromyalgia</label><br>
+                        <label><input type="checkbox" id="chronicFatigueSyndrome" name="medicalConditions" value="chronicFatigueSyndrome"> Chronic Fatigue Syndrome</label><br>
+                        <label><input type="checkbox" id="acidReflux" name="medicalConditions" value="acidReflux"> Acid Reflux</label><br>
+                        <label><input type="checkbox" id="sleepApnea" name="medicalConditions" value="sleepApnea"> Sleep Apnea</label><br>
+                    </div>
+                    <div class="conditions-column">
+                        <h3>Mental Health</h3>
+                        <label><input type="checkbox" id="depression" name="medicalConditions" value="depression"> Depression</label><br>
+                        <label><input type="checkbox" id="anxiety" name="medicalConditions" value="anxiety"> Anxiety</label><br>
+                        <label><input type="checkbox" id="bipolarDisorder" name="medicalConditions" value="bipolarDisorder"> Bipolar Disorder</label><br>
+                        <label><input type="checkbox" id="schizophrenia" name="medicalConditions" value="schizophrenia"> Schizophrenia</label><br>
+                        <div class="conditions-column">
+                            <h3>Respiratory Diseases</h3>
+                            <label><input type="checkbox" id="flu" name="disease" value="flu"> Flu</label><br>
+                            <label><input type="checkbox" id="cold" name="disease" value="cold"> Cold</label><br>
+                            <label><input type="checkbox" id="pneumonia" name="disease" value="pneumonia"> Pneumonia</label><br>
+                            <label><input type="checkbox" id="bronchitis" name="disease" value="bronchitis"> Bronchitis</label><br>
+                            <label><input type="checkbox" id="strepThroat" name="disease" value="strepThroat"> Strep Throat</label><br>
+                        </div>
+                    </div>
+                    <div class="conditions-column">
+                        <h3>Other Conditions</h3>
+                        <label><input type="checkbox" id="migraine" name="medicalConditions" value="migraine"> Migraine</label><br>
+                        <label><input type="checkbox" id="allergies" name="medicalConditions" value="allergies"> Allergies</label><br>
+                        <label><input type="checkbox" id="chronicPain" name="medicalConditions" value="chronicPain"> Chronic Pain</label><br>
+                        <label><input type="checkbox" id="thyroidDisorder" name="medicalConditions" value="thyroidDisorder"> Thyroid Disorder</label><br>
+                        
+                    </div>
+                </div>
+            </fieldset>
+            
+            
+
+            <fieldset class="section">
+                <legend>Past Surgical History</legend>
+                <div class="form-group">
+                    <label for="pastSurgicalHistory">Enter details of any past surgeries:</label>
+                    <textarea id="pastSurgicalHistory" name="pastSurgicalHistory" rows="4" cols="50" placeholder="Enter details here..."></textarea>
+                </div>
+            </fieldset>
+            
+            <fieldset class="section">
+                <legend>Recent Hospitalizations</legend>
+                <div class="form-group">
+                    <label for="hospitalizationReason">Reason for Hospitalization:</label>
+                    <textarea id="hospitalizationReason" name="hospitalizationReason" rows="4" cols="50" placeholder="Enter reason here..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="hospitalizationDate">Date of Hospitalization:</label>
+                    <input type="date" id="hospitalizationDate" name="hospitalizationDate">
+                </div>
+            </fieldset>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

@@ -66,3 +66,22 @@ def results_screen_view(request):
 
 def healthinfo_screen_view(request):
     return render(request, 'health-information.html')
+
+def assessment_screen_view(request):
+    return render(request, 'health-assessment.html')
+
+def gensurvey_screen_view(request):
+    return render(request, 'general-survey.html')
+
+def integumentary_screen_view(request):
+    return render(request, 'integumentary-system.html')
+
+def musculoskeletal_screen_view(request):
+    return render(request, 'musculoskeletal-system.html')
+
+def vitalsigns_screen_view(request):
+    return render(request, 'vital-signs.html')
+
+def history_screen_view(request):
+    return render(request, 'medical-history.html')
+

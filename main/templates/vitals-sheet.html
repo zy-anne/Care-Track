@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vital Signs Data Sheet</title>
+    <style>
+        body {
+            background-color: #7ABA78; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        #container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #0A6847; 
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #F6E9B2; 
+        }
+        tr:nth-child(odd) {
+            background-color: #F3CA52; 
+        }
+        input[type="text"], input[type="number"], input[type="date"], input[type="time"] {
+            width: calc(100% - 20px);
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        textarea {
+            width: calc(100% - 20px);
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #0A6847; 
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        input[type="submit"]:hover {
+            background-color: #7ABA78; 
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Vital Signs Data Sheet</h1>
+        <form id="vitalSignsForm">
+            <table>
+                <tr>
+                    <th colspan="4">Patient Information</th>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td colspan="3"><input type="text" name="patient_name" required></td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td><input type="number" name="age" min="0" required></td>
+                    <td>Gender</td>
+                    <td>
+                        <select name="gender" required>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        Additional Notes<br>
+                        <textarea name="notes" rows="4"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="4">Vital Signs</th>
+                </tr>
+                <tr>
+                    <td>Heart Rate (bpm)</td>
+                    <td><input type="number" name="heart_rate" min="0" required></td>
+                    <td>Date</td>
+                    <td><input type="date" name="date" required></td>
+                </tr>
+                <tr>
+                    <td>Blood Pressure (mmHg)</td>
+                    <td><input type="text" name="blood_pressure" pattern="\d+\/\d+" title="Format: systolic/diastolic" required></td>
+                    <td>Date</td>
+                    <td><input type="date" name="date" required></td>
+                </tr>
+                <tr>
+                    <td>Respiratory Rate (breaths/min)</td>
+                    <td><input type="number" name="respiratory_rate" min="0" required></td>
+                    <td>Date</td>
+                    <td><input type="date" name="date" required></td>
+                </tr>
+                <tr>
+                    <td>Temperature (°C)</td>
+                    <td><input type="number" name="temperature" step="0.01" required></td>
+                    <td>Date</td>
+                    <td><input type="date" name="date" required></td>
+                </tr>
+                <tr>
+                    <td>Oxygen Saturation (%)</td>
+                    <td><input type="number" name="oxygen_saturation" min="0" max="100" required></td>
+                    <td>Date</td>
+                    <td><input type="date" name="date" required></td>
+                </tr>
+                <tr>
+                    <td>Pain Level</td>
+                    <td><input type="number" name="pain_level" min="0" max="10" required></td>
+                    <td>Date</td>
+                    <td><input type="date" name="date" required></td>
+                </tr>
+                <tr>
+                    <td>Glucose Level (mg/dL)</td>
+                    <td><input type="number" name="glucose_level" min="0" required></td>
+                    <td>Date</td>
+                    <td><input type="date" name="date" required></td>
+                </tr>
+                <tr>
+                    <td>Weight (kg)</td>
+                    <td><input type="number" name="weight" min="0" step="0.01" required></td>
+                    <td>Date</td>
+                    <td><input type="date" name="date" required></td>
+                </tr>
+            </table>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('vitalSignsForm').addEventListener('submit', function(event) {
+            var form = event.target;
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                alert('Please fill in all required fields correctly.');
+            }
+        });
+    </script>
+</body>
+</html>

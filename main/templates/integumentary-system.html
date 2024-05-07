@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HEALTH ASSESSMENT</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #e4e3bb;
+    color: #0A6847;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    color: #e5c01e;
+    text-align: center;
+    margin-top: 20px;
+  }
+  h2 {
+    color: #836f10;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .button-group {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  .button {
+    background-color: #F3CA52;
+    color: #0A6847;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #7ABA78;
+  }
+  th {
+    background-color: #e9c55b;
+    color: #0A6847;
+  }
+</style>
+</head>
+<body>
+
+
+    <h1>INTEGUMENTARY SYSTEM</h1>
+    <table>
+        <thead>
+          <tr>
+  <h2>SKIN</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 40%;">AREA TO BE ASSESSED</th>
+        <th style="width: 30%;">FINDINGS</th>
+        <th style="width: 30%;">INTERPRETATION</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Skin coloration</td>
+        <td><input type="text" id="skinColoration" name="skinColoration"></td>
+        <td>
+        <select id="interpretationSkinColoration" name="interpretationSkinColoration">
+          <option value="normal">Normal</option>
+          <option value="deviation">Deviation from Normal</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Skin color uniformity</td>
+      <td><input type="text" id="skinColorUniformity" name="skinColorUniformity"></td>
+      <td>
+        <select id="interpretationSkinColorUniformity" name="interpretationSkinColorUniformity">
+          <option value="normal">Normal</option>
+          <option value="deviation">Deviation from Normal</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Skin edema</td>
+      <td><input type="text" id="skinEdema" name="skinEdema"></td>
+      <td>
+        <select id="interpretationSkinEdema" name="interpretationSkinEdema">
+          <option value="normal">Normal</option>
+          <option value="deviation">Deviation from Normal</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Presence of lesions</td>
+      <td><input type="text" id="presenceOfLesions" name="presenceOfLesions"></td>
+      <td>
+        <select id="interpretationPresenceOfLesions" name="interpretationPresenceOfLesions">
+          <option value="normal">Normal</option>
+          <option value="deviation">Deviation from Normal</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Skin moisture</td>
+      <td><input type="text" id="skinMoisture" name="skinMoisture"></td>
+      <td>
+        <select id="interpretationSkinMoisture" name="interpretationSkinMoisture">
+          <option value="normal">Normal</option>
+          <option value="deviation">Deviation from Normal</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Skin Temperature</td>
+      <td><input type="text" id="skinTemperature" name="skinTemperature"></td>
+      <td>
+        <select id="interpretationSkinTemperature" name="interpretationSkinTemperature">
+          <option value="normal">Normal</option>
+          <option value="deviation">Deviation from Normal</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Skin Turgor</td>
+      <td><input type="text" id="skinTurgor" name="skinTurgor"></td>
+      <td>
+        <select id="interpretationSkinTurgor" name="interpretationSkinTurgor">
+          <option value="normal">Normal</option>
+          <option value="deviation">Deviation from Normal</option>
+        </select>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>HAIR</h2>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 40%;">AREA TO BE ASSESSED</th>
+      <th style="width: 30%;">FINDINGS</th>
+      <th style="width: 30%;">INTERPRETATION</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td>Evenness of growth over the scalp</td>
+        <td><input type="text" id="evennessOfGrowth" name="evennessOfGrowth"></td>
+        <td>
+          <select id="interpretationEvennessOfGrowth" name="interpretationEvennessOfGrowth">
+            <option value="normal">Normal</option>
+            <option value="deviation">Deviation from Normal</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Hair thickness/thinness</td>
+        <td><input type="text" id="hairThickness" name="hairThickness"></td>
+        <td>
+          <select id="interpretationHairThickness" name="interpretationHairThickness">
+            <option value="normal">Normal</option>
+            <option value="deviation">Deviation from Normal</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Hair texture and oiliness</td>
+        <td><input type="text" id="hairTexture" name="hairTexture"></td>
+        <td>
+          <select id="interpretationHairTexture" name="interpretationHairTexture">
+            <option value="normal">Normal</option>
+            <option value="deviation">Deviation from Normal</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Infections or Infestations</td>
+        <td><input type="text" id="infections" name="infections"></td>
+        <td>
+          <select id="interpretationInfections" name="interpretationInfections">
+            <option value="normal">Normal</option>
+            <option value="deviation">Deviation from Normal</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Body hair</td>
+        <td><input type="text" id="bodyHair" name="bodyHair"></td>
+        <td>
+          <select id="interpretationBodyHair" name="interpretationBodyHair">
+            <option value="normal">Normal</option>
+            <option value="deviation">Deviation from Normal</option>
+          </select>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>NAILS</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 40%;">AREA TO BE ASSESSED</th>
+        <th style="width: 30%;">FINDINGS</th>
+        <th style="width: 30%;">INTERPRETATION</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Nail shape, curvature, and angle</td>
+        <td><input type="text" id="nailShape" name="nailShape"></td>
+        <td>
+          <select id="interpretationNailShape" name="interpretationNailShape">
+            <option value="normal">Normal</option>
+            <option value="deviation">Deviation from Normal</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Fingernail and toenail bed color</td>
+        <td><input type="text" id="nailBedColor" name="nailBedColor"></td>
+        <td>
+          <select id="interpretationNailBedColor" name="interpretationNailBedColor">
+            <option value="normal">Normal</option>
+            <option value="deviation">Deviation from Normal</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Fingernail and toenail texture</td>
+        <td><input type="text" id="nailTexture" name="nailTexture"></td>
+        <td>
+          <select id="interpretationNailTexture" name="interpretationNailTexture">
+            <option value="normal">Normal</option>
+            <option value="deviation">Deviation from Normal</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Tissue surrounding nails</td>
+        <td><input type="text" id="tissueSurroundingNails" name="tissueSurroundingNails"></td>
+        <td>
+          <select id="interpretationTissueSurroundingNails" name="interpretationTissueSurroundingNails">
+            <option value="normal">Normal</option>
+            <option value="deviation">Deviation from Normal</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Capillary refill</td>
+        <td><input type="text" id="capillaryRefill" name="capillaryRefill"></td>
+        <td>
+          <select id="interpretationCapillaryRefill" name="interpretationCapillaryRefill">
+            <option value="normal">Normal</option>
+            <option value="deviation">Deviation from Normal</option>
+          </select>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="button-group">
+    <button class="button" onclick="goBack()">BACK</button>
+    <button class="button" onclick="save()">SAVE</button>
+  </div>
+
+</div>
+
+<script>
+  function goBack() {
+    window.history.back();
+  }
+
+  function save() {
+    alert("Save Successfully");
+    window.location.href = "health-assessment/";
+  }
+  
+</script>
+
+</body>
+</html>

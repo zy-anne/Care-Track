@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HEALTH ASSESSMENT</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F6E9B2;
+    color: #0A6847;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .container {
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  h1 {
+    color: #F3CA52;
+    font-size: 36px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  .button-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  .button {
+    background-color: #F3CA52;
+    color: #0A6847;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .button:hover {
+    background-color: #7ABA78;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>HEALTH ASSESSMENT</h1>
+
+  <div class="button-group">
+    <button class="button" onclick="navigateToGeneralSurvey()">GENERAL SURVEY</button>
+    <button class="button" onclick="navigateToIntegumentarySystem()">INTEGUMENTARY SYSTEM</button>
+    <button class="button" onclick="navigateToHeadToNeck()">HEAD TO NECK</button>
+    <button class="button" onclick="navigateToChestToAbdomen()">CHEST TO ABDOMEN</button>
+    <button class="button" onclick="navigateToMusculoskeletalSystem()">MUSCULOSKELETAL SYSTEM</button>
+  </div>
+
+</div>
+
+<script>
+  function navigateToGeneralSurvey() {
+    window.location.href = "general-survey/";
+  }
+
+  function navigateToIntegumentarySystem() {
+    window.location.href = "integumentary-system/";
+  }
+
+  function navigateToHeadToNeck() {
+    window.location.href = "head-to-neck/";
+  }
+
+  function navigateToChestToAbdomen() {
+    window.location.href = "chest-to-abdomen/";
+  }
+
+  function navigateToMusculoskeletalSystem() {
+    window.location.href = "musculoskeletal-system/";
+  }
+
+</script>
+
+</body>
+</html>

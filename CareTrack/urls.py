@@ -28,7 +28,13 @@ from main.views import (
     login_screen_view,
     signup_screen_view,
     main_menu_screen_view,
-    healthinfo_screen_view
+    healthinfo_screen_view,
+    assessment_screen_view,
+    gensurvey_screen_view,
+    integumentary_screen_view,
+    musculoskeletal_screen_view,
+    vitalsigns_screen_view,
+    history_screen_view
 )
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -42,4 +48,11 @@ urlpatterns = [
     path ('main-menu/', main_menu_screen_view, name="main-menu"),
     path ('results/', results_screen_view, name="results"),
     path ('health-information/', healthinfo_screen_view, name="health-information"),
+    path ('health-assessment/', assessment_screen_view, name="health-assessment"),
+    path ('health-assessment/general-survey/', gensurvey_screen_view, name="general-survey"),
+    path ('health-assessment/integumentary-system/', integumentary_screen_view, name="integumentary-system"),
+    path ('health-assessment/musculoskeletal-system/', musculoskeletal_screen_view, name="musculoskeletal-system"),
+    path ('vital-signs/', vitalsigns_screen_view, name="vital-signs"),
+    path ('medical-history/', history_screen_view, name="medical-history")
+    
     ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HEALTH ASSESSMENT</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #e4e3bb;
+    color: #0A6847;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    color: #e5c01e;
+    text-align: center;
+    margin-top: 20px;
+  }
+  h2 {
+    color: #836f10;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .button-group {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  .button {
+    background-color: #F3CA52;
+    color: #0A6847;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #7ABA78;
+  }
+  th {
+    background-color: #e9c55b;
+    color: #0A6847;
+  }
+</style>
+</head>
+<body>
+
+  <h1>MUSCULOSKELETAL SYSTEM</h1>
+
+  <h2>MUSCLE</h2>
+  <table>
+    <thead>
+     <tr>
+        <th style="width: 40%;">AREA TO BE ASSESSED</th>
+        <th style="width: 30%;">FINDINGS</th>
+        <th style="width: 30%;">INTERPRETATION</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Muscle size</td>
+        <td><input type="text" id="muscleSize" name="muscleSize"></td>
+        <td>
+          <select id="interpretationMuscleSize" name="interpretationMuscleSize">
+            <option value="normal">Normal</option>
+            <option value="deviation">Deviation from Normal</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Contractures</td>
+        <td><input type="text" id="contractures" name="contractures"></td>
+        <td>
+          <select id="interpretationContractures" name="interpretationContractures">
+            <option value="normal">Normal</option>
+            <option value="deviation">Deviation from Normal</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Fasciculations and Tremors</td>
+        <td><input type="text" id="fasciculationsTremors" name="fasciculationsTremors"></td>
+        <td>
+          <select id="interpretationFasciculationsTremors" name="interpretationFasciculationsTremors">
+            <option value="normal">Normal</option>
+            <option value="deviation">Deviation from Normal</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Muscle tone</td>
+        <td><input type="text" id="muscleTone" name="muscleTone"></td>
+        <td>
+          <select id="interpretationMuscleTone" name="interpretationMuscleTone">
+            <option value="normal">Normal</option>
+            <option value="deviation">Deviation from Normal</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Palpate muscles</td>
+        <td><input type="text" id="palpateMuscles" name="palpateMuscles"></td>
+        <td>
+          <select id="interpretationPalpateMuscles" name="interpretationPalpateMuscles">
+            <option value="normal">Normal</option>
+            <option value="deviation">Deviation from Normal</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Muscle Strength (head & shoulders)</td>
+        <td><input type="text" id="muscleStrengthHeadShoulders" name="muscleStrengthHeadShoulders"></td>
+        <td>
+          <select id="interpretationMuscleStrengthHeadShoulders" name="interpretationMuscleStrengthHeadShoulders">
+            <option value="normal">Normal</option>
+            <option value="deviation">Deviation from Normal</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Muscle Strength (upper extremities)</td>
+        <td><input type="text" id="muscleStrengthUpperExtremities" name="muscleStrengthUpperExtremities"></td>
+        <td>
+          <select id="interpretationMuscleStrengthUpperExtremities" name="interpretationMuscleStrengthUpperExtremities">
+            <option value="normal">Normal</option>
+            <option value="deviation">Deviation from Normal</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Muscle Strength (lower extremities)</td>
+        <td><input type="text" id="muscleStrengthLowerExtremities" name="muscleStrengthLowerExtremities"></td>
+        <td>
+          <select id="interpretationMuscleStrengthLowerExtremities" name="interpretationMuscleStrengthLowerExtremities">
+            <option value="normal">Normal</option>
+            <option value="deviation">Deviation from Normal</option>
+          </select>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+<h2>BONES AND JOINTS</h2>
+  <table>
+    <thead>
+     <tr>
+        <th style="width: 40%;">AREA TO BE ASSESSED</th>
+        <th style="width: 30%;">FINDINGS</th>
+        <th style="width: 30%;">INTERPRETATION</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Muscle size</td>
+        <td><input type="text" id="muscleSize" name="muscleSize"></td>
+        <td>
+          <select id="interpretationMuscleSize" name="interpretationMuscleSize">
+            <option value="normal">Normal</option>
+            <option value="deviation">Deviation from Normal</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Contractures</td>
+        <td><input type="text" id="contractures" name="contractures"></td>
+        <td>
+          <select id="interpretationContractures" name="interpretationContractures">
+            <option value="normal">Normal</option>
+            <option value="deviation">Deviation from Normal</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Fasciculations and Tremors</td>
+        <td><input type="text" id="fasciculationsTremors" name="fasciculationsTremors"></td>
+        <td>
+          <select id="interpretationFasciculationsTremors" name="interpretationFasciculationsTremors">
+            <option value="normal">Normal</option>
+            <option value="deviation">Deviation from Normal</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Muscle tone</td>
+        <td><input type="text" id="muscleTone" name="muscleTone"></td>
+        <td>
+          <select id="interpretationMuscleTone" name="interpretationMuscleTone">
+            <option value="normal">Normal</option>
+            <option value="deviation">Deviation from Normal</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Palpate muscles</td>
+        <td><input type="text" id="palpateMuscles" name="palpateMuscles"></td>
+        <td>
+          <select id="interpretationPalpateMuscles" name="interpretationPalpateMuscles">
+            <option value="normal">Normal</option>
+            <option value="deviation">Deviation from Normal</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Muscle Strength (head & shoulders)</td>
+        <td><input type="text" id="muscleStrengthHeadShoulders" name="muscleStrengthHeadShoulders"></td>
+        <td>
+          <select id="interpretationMuscleStrengthHeadShoulders" name="interpretationMuscleStrengthHeadShoulders">
+            <option value="normal">Normal</option>
+            <option value="deviation">Deviation from Normal</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Muscle Strength (upper extremities)</td>
+        <td><input type="text" id="muscleStrengthUpperExtremities" name="muscleStrengthUpperExtremities"></td>
+        <td>
+          <select id="interpretationMuscleStrengthUpperExtremities" name="interpretationMuscleStrengthUpperExtremities">
+            <option value="normal">Normal</option>
+            <option value="deviation">Deviation from Normal</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Muscle Strength (lower extremities)</td>
+        <td><input type="text" id="muscleStrengthLowerExtremities" name="muscleStrengthLowerExtremities"></td>
+        <td>
+          <select id="interpretationMuscleStrengthLowerExtremities" name="interpretationMuscleStrengthLowerExtremities">
+            <option value="normal">Normal</option>
+            <option value="deviation">Deviation from Normal</option>
+          </select>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="button-group">
+    <button class="button" onclick="goBack()">BACK</button>
+    <button class="button" onclick="save()">SAVE</button>
+  </div>
+
+</div>
+
+<script>
+  function goBack() {
+    window.history.back();
+  }
+
+  function save() {
+    alert("Save Successfully");
+    window.location.href = "health-assessment/";
+  }
+</script>
+
+</body>
+</html>
