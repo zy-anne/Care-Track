@@ -7,34 +7,8 @@
     <link rel="stylesheet" href="style.css">
 
     <body>
-        <nav>
-            <div class="wrapper">
-                <div class="logo">
-                    <a href="">CareTrack</a>
-                </div>
-                <input type="radio" name="slide" id="menu_btn" /><input type="radio" name="slide" id="cancel_btn" />
-                <ul class="nav_links">
-    
-                    <li><a href=" ">Home</a></li>
-                    <li><a href="about/">About</a></li>
-                    <li>
-                        <a href="#" class="desktop_item"> Menu</a>
-                        <input type="checkbox" id="showDrop" />
-                        <label for="showDrop" class="mobile_item"> Menu</label>
-                        <ul class="drop_menu">
-                            <li><a href="health-information/">Health Information and Data</a></li>
-                            <li><a href="medical-history/">Medical History</a></li>
-                            <li><a href="nurse-notes/">Nurse's Notes</a></li>
-                            <li><a href="health-assessment/">Health Assesment</a></li>
-                            <li><a href="results/">Results</a></li>
-                            <li><a href="billing/">Billing</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="feedback/">Feedback</a></li>
-                </ul>
-    
-            </div>
-        </nav>
+        {% include 'snippets/header.html'%}
+        
     <style>
         *{ margin: 0;
         padding: 0;
@@ -281,3 +255,5 @@ h1 {
 }
 
 </style>
+</body>
+</html>
